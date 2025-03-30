@@ -38,9 +38,56 @@ if "historico" not in st.session_state:
 if "pergunta" not in st.session_state:
     st.session_state.pergunta = ""
 
-# Interface estilizada
-st.markdown('<h1 class="main-title">📄🔍 RAG com IA e PDFs</h1>', unsafe_allow_html=True)
-st.markdown('<p class="sub-title">Pesquise conteúdos em documentos PDF com ajuda da IA!</p>', unsafe_allow_html=True)
+
+# Incluir Bootstrap
+st.markdown(
+    """
+    <link 
+        rel="stylesheet" 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" 
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk1k4e3p09H9XWhFq6u6qD8S/g5T7f6Wg7d5z5O4M" 
+        crossorigin="anonymous"
+    >
+    """, 
+    unsafe_allow_html=True
+)
+
+# Layout principal
+st.markdown(
+    """
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1 class="text-primary">Trabalho de RAG com IA</h1>
+                <p class="lead"><b>Professor:</b> Hélio Bomfim de Macêdo Filho </p>
+                <p class="lead"><b>Disciplina:</b> Inteligência Artificial Generativa no contexto da Administração Pública</p>
+                <p class="lead"><b>Aluno:</b> Francisco Carlos Molina Duarte Júnior</p>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Relatório de Gestão Interna (RGI)</h5>
+                        <p class="card-text">O Relatório de Gestão Integrado (RGI) da Enap 2024 é um documento que consolida os principais resultados e avanços da Escola Nacional de Administração Pública no último período. Ele detalha a governança institucional, planejamento estratégico e execução orçamentária, além de apresentar ações e impactos em áreas como capacitação, inovação e cooperação federativa. O relatório também aborda iniciativas internas para fortalecimento da gestão pública, como programas de formação, auditorias e aprimoramento da transparência. Além disso, destaca parcerias internacionais, projetos voltados à inclusão e modernização de processos. O RGI reforça o compromisso da Enap com a excelência na administração pública e a criação de valor para a sociedade​.</p>
+                        <a href="pdfs/RGI_2024.pdf" class="btn btn-success">Saiba mais</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card shadow-lg">
+                    <div class="card-body">
+                        <h5 class="card-title">Objetivo do projeto</h5>
+                        <p class="card-text">Possibilitar, nesta primeira fase, a pesquisa e resposta de perguntas sobre o RGI 2024. </p>
+                        <a href="#" class="btn btn-danger">Explorar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    """, 
+    unsafe_allow_html=True
+)
 
 # Carregar PDFs da pasta
 pdf_files = [f for f in os.listdir(PDF_FOLDER) if f.endswith(".pdf")]
