@@ -79,7 +79,6 @@ st.markdown(
                     <div class="card-body">
                         <h5 class="card-title">Objetivo do projeto</h5>
                         <p class="card-text">Possibilitar, nesta primeira fase, a pesquisa e resposta de perguntas sobre o RGI 2024. </p>
-                        <a href="#" class="btn btn-danger">Explorar</a>
                     </div>
                 </div>
             </div>
