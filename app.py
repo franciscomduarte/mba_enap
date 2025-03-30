@@ -70,7 +70,7 @@ st.markdown(
                     <div class="card-body">
                         <h5 class="card-title">Relatório de Gestão Interna (RGI)</h5>
                         <p class="card-text">O Relatório de Gestão Integrado (RGI) da Enap 2024 é um documento que consolida os principais resultados e avanços da Escola Nacional de Administração Pública no último período. Ele detalha a governança institucional, planejamento estratégico e execução orçamentária, além de apresentar ações e impactos em áreas como capacitação, inovação e cooperação federativa. O relatório também aborda iniciativas internas para fortalecimento da gestão pública, como programas de formação, auditorias e aprimoramento da transparência. Além disso, destaca parcerias internacionais, projetos voltados à inclusão e modernização de processos. O RGI reforça o compromisso da Enap com a excelência na administração pública e a criação de valor para a sociedade​.</p>
-                        <a href="pdfs/RGI_2024.pdf" class="btn btn-success">Saiba mais</a>
+                        <a href="https://drive.google.com/file/d/1kZIR-hSIw8UE90T2QgKPY3hXObnsrcuh/view?usp=sharing" target="_blank" class="btn btn-success">Saiba mais</a>
                     </div>
                 </div>
             </div>
