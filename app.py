@@ -92,18 +92,18 @@ st.markdown(
 pdf_files = [f for f in os.listdir(PDF_FOLDER) if f.endswith(".pdf")]
 
 if not pdf_files:
-    st.error("⚠️ Nenhum PDF encontrado na pasta 'pdfs/'. Adicione arquivos e reinicie o app.")
+    st.error("Nenhum PDF encontrado na pasta 'pdfs/'. Adicione arquivos e reinicie o app.")
 else:
     col1, col2 = st.columns([2, 3])
 
     with col1:
-        selected_pdf = st.selectbox("📂 Escolha um PDF para pesquisa:", pdf_files)
+        selected_pdf = st.selectbox("PDFs disponíveis:", pdf_files)
 
     if selected_pdf:
         pdf_path = os.path.join(PDF_FOLDER, selected_pdf)
 
         with col2:
-            pergunta = st.text_input("❓ Digite sua pergunta:", value=st.session_state.pergunta, key="input_pergunta")
+            pergunta = st.text_input("Digite sua pergunta:", value=st.session_state.pergunta, key="input_pergunta")
 
         if st.button("🔎 Pesquisar", key="pesquisar"):
             if pergunta:
@@ -124,20 +124,20 @@ else:
                         # Adicionar ao histórico
                         st.session_state.historico.append({"pergunta": pergunta, "resposta": resposta})
 
-                        st.success("✅ Resposta gerada com sucesso!")
-                        st.markdown(f'<div class="historico-box"><strong>❓ Pergunta:</strong> {pergunta}<br><strong>💡 Resposta:</strong> {resposta}</div>', unsafe_allow_html=True)
+                        st.success("Resposta gerada com sucesso!")
+                        st.markdown(f'<div class="historico-box"><strong>Pergunta:</strong> {pergunta}<br><strong>💡 Resposta:</strong> {resposta}</div>', unsafe_allow_html=True)
 
-                        # 🔥 Limpar o campo de pergunta
+                        # Limpar o campo de pergunta
                         st.session_state.pergunta = ""
                         st.rerun()
 
                     except Exception as e:
                         st.error(f"Erro ao consultar IA: {e}")
             else:
-                st.warning("⚠️ Digite uma pergunta antes de pesquisar.")
+                st.warning("Digite uma pergunta antes de pesquisar.")
 
         # Exibir histórico de perguntas e respostas
         if st.session_state.historico:
-            st.subheader("📜 Histórico de Perguntas")
+            st.subheader("Histórico de Perguntas")
             for h in reversed(st.session_state.historico):
-                st.markdown(f'<div class="historico-box"><strong>❓ {h["pergunta"]}</strong><br>💡 {h["resposta"]}</div>', unsafe_allow_html=True)
+                st.markdown(f'<div class="historico-box"><strong> {h["pergunta"]}</strong><br> {h["resposta"]}</div>', unsafe_allow_html=True)
